@@ -1,11 +1,18 @@
 <?php
-echo "Hello, Elliot"; // echoes
-
-$name = "Bintoki";
-$age = 25;
-echo $age;
-$age = $age * 2 * 3 * 4 * 5 * 6 * 7 * 8 * 9 * 10;
-echo $age;
-
-echo 2135125312635126325+219371287361263127863;
+$int = 10;
+$test = 50;
+$test = "Hello";
+$test = false;
+$test = null;
+$fakk = true;
+var_dump($test);
+var_dump($fakk);
+$test = [1, 2, "three", true];
+var_dump($test);
+$test = new stdClass();
+$test->name = "John";
+var_dump($test);
+$num1 = 10;
+$num2 = 20;
+var_dump($num1 === $num2);
 ?>
