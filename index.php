@@ -1,22 +1,15 @@
 <?php
-$test = true;
-$test = false;
-$test = true && false;
-$test = true || false;
-$test = !false;
+$test = [1, 2, 'word', true];
+var_dump($test[2]);
+$test[2] = 'new word';
 var_dump($test);
-$test = !(10 > 5);
+$test[4] = 'yuppity';
 var_dump($test);
-$test = 10 < 5;
-$test = 10 == 10;
-$test = 10 === 10;
-$test = 10 >= 10;
-$test = 10 <= 10;
-$test = 10 != 10;
-$test = 10 !== 10;
-$test = 10 == '10';
-$test = 10 === '10';
-$test = true && false || (true && !true);
-//true and false or true and false
+$test[] = 'yup';
 var_dump($test);
-?>
+array_push($test, 'pushed value');
+var_dump($test);
+$test = [
+    'name' => 'tret',
+    'age' => 25,
+];
