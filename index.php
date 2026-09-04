@@ -1,12 +1,22 @@
 <?php
-$test = 'hello';
-$test = 'hello' . 'world';
-$test .= '!'; 
-$name = 'John';
-$age = '30';
-$test = $name . ' is ' . $age . ' years old.';
-$test = "$name is $age years old.";
+$test = true;
+$test = false;
+$test = true && false;
+$test = true || false;
+$test = !false;
 var_dump($test);
-$test = "hello\n\nworld";
+$test = !(10 > 5);
+var_dump($test);
+$test = 10 < 5;
+$test = 10 == 10;
+$test = 10 === 10;
+$test = 10 >= 10;
+$test = 10 <= 10;
+$test = 10 != 10;
+$test = 10 !== 10;
+$test = 10 == '10';
+$test = 10 === '10';
+$test = true && false || (true && !true);
+//true and false or true and false
 var_dump($test);
 ?>
