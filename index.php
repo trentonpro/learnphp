@@ -1,34 +1,38 @@
 <?php
-$num = 10;
-if($num > 5) {
-    var_dump('Bigger');
+
+for($i=0; $i<10; $i++){
+
 }
 
-if($num > 5) 
-    var_dump('Bigger');
-} else {
-    var_dump('Smaller');
+for($i=9; $i>=0; $i--){
+    var_dump($i);
 }
 
-$i = 1;
+for($i=2; $i<=1_000_000; $i*=2){
+    var_dump($i);
+}
 
-switch($i) {
-    case 1:
-        var_dump('yx');
-        break;
-    case 2:
-        var_dump('kaks');
-        break;
-        case 3:
-        case 4:
-            var_dump('kolm neli');
-            break;
-        case 5:
-            var_dump('viis');
-            break;
-        case 6:
-            var_dump('kuus');
-            break;
-    default:
-        var_dump('dunno');
+$time = time();
+$n = 0;
+while($time+1 > time()) {
+    $n++;
+}
+var_dump($n);
+
+while (false){
+    var_dump('while');
+}
+
+do {
+    var_dump('DO');
+} while (false);
+
+// while (true) {
+
+// }
+
+$fruits = ['apple', 'cherry', 'banana'];
+
+foreach ($fruits as $fruit) {
+    var_dump($fruit);
 }
