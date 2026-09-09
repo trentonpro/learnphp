@@ -1,41 +1,22 @@
 <?php
 
-function hello() {
-    var_dump('Hello');
-}
+class Box {
+    public $width;
+    public $height;
+    public $length;
+    public $isOpen;
+    public $hasBeenOpened;
 
-hello();
-hello();
-hello();
-
-function helloNameandage ($name, $age, $debt) {
-    var_dump("Hello, $name. You are $age years old. You owe child support of $debt dollars.");
-}
-
-helloNameandage('Dale', 41, 115000);
-
-$test = function (){
-
-};
-
-var_dump($test);
-
-$numbers = [1,2,3,4,5];
-$squares = array_map(function ($n) {
-    return $n * $n;
-}, $numbers);
-$squares = array_map(fn ($n) => $n * $n, $numbers);
-var_dump($squares);
-
-function cube($a) {
-    if($a < 0) {
-        return 'Negative.';
+    public function open() {
+        $this->isOpen = true;
+        $this->hasBeenOpened = true;
     }
-    return $a * $a * $a;
+
+    public function close() {
+        $this->isOpen = false;
+    }
+
+   public function volume() {
+        return $this->height * $this->width * $this->length;
+    }
 }
-
-var_dump(cube(4));
-
-$answer = cube(5);
-$text = "cube of 5 is $answer";
-echo $text;
