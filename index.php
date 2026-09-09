@@ -21,4 +21,13 @@ class Box {
     }
 }
 
-// test
+$num = 1;
+$num =  &$num1; //pointer pass by reference
+$num1 = 2;
+var_dump($num1, $num2);
+
+$box1 = new Box();
+$box1->width = 1;
+$box2 = clone $box1; // use clone to create a copy of the object
+$box2->width = 2;
+var_dump($box1, $box2);
