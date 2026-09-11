@@ -21,3 +21,11 @@ trait MakesSound {
         return $this->sound;
     }
 }
+
+class MetalBox extends Box { //inherits from box with extend
+    public $weight;
+
+    public function mass(){
+        return $this->volume() * $this->weight;
+    }
+}
