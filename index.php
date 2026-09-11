@@ -1,22 +1,23 @@
 <?php
 
-class Box {
-    public $width;
-    public $height;
-    public $length;
-    public $isOpen;
-    public $hasBeenOpened;
+class Cat {
+    use MakesSound;
+}
 
-    public function open() {
-        $this->isOpen = true;
-        $this->hasBeenOpened = true;
+class Dog {
+    use HasSmell, MakesSound;
+}
+
+trait HasSmell {
+    public $smell;
+    public function sniff() {
+        return 'Smells like ' . $this->smell;
     }
+}
 
-    public function close() {
-        $this->isOpen = false;
-    }
-
-   public function volume() {
-        return $this->height * $this->width * $this->length;
+trait MakesSound {
+    public $sound;
+    public function noise() {
+        return $this->sound;
     }
 }
