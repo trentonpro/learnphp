@@ -1,31 +1,28 @@
 <?php
+ $name = 'Trent';
+?>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome <?=$name?> to my website</h1>
+    <?php if($coinFlip): ?>
+        <h1>Kull</h1>
+        <?php else: ?>
+            <h1>Kiri</h1>
+        <?php endif ?>
 
-class Box { 
-
-
-    public function __construct(private $w, private $h, private $l) {
-
-        var_dump('Box created');
-    }
-
-    public function volume() {
-        return $this->w * $this->h * $this->l;
-    }
-
-    public function __set($name, $value) {
-        var_dump($name, $value);
-    }
-    public function __toString() {
-        return "im a box with $this->w, $this->h, $this->l";
-    }
-
-    public function __destruct() {
-        var_dump('Box destroyed');
-    }
-}
-
-$box1 = new Box(1,2,3);
-$box1 = 1;
-$box2 = new Box(4,5,6);
-var_dump($box1, $box2);
-echo $box1;
+    <ul>
+        <?php for($i=0;$i=10;$i++): ?>
+            <li><?=$i?></li>
+        <?php endfor ?>
+        </ul>
+</body>
+</html>
+ 
