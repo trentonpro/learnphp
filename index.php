@@ -1,31 +1,31 @@
 <?php
 
-class Cat {
-    use MakesSound;
-}
+class Box { 
 
-class Dog {
-    use HasSmell, MakesSound;
-}
 
-trait HasSmell {
-    public $smell;
-    public function sniff() {
-        return 'Smells like ' . $this->smell;
+    public function __construct(private $w, private $h, private $l) {
+
+        var_dump('Box created');
+    }
+
+    public function volume() {
+        return $this->w * $this->h * $this->l;
+    }
+
+    public function __set($name, $value) {
+        var_dump($name, $value);
+    }
+    public function __toString() {
+        return "im a box with $this->w, $this->h, $this->l";
+    }
+
+    public function __destruct() {
+        var_dump('Box destroyed');
     }
 }
 
-trait MakesSound {
-    public $sound;
-    public function noise() {
-        return $this->sound;
-    }
-}
-
-class MetalBox extends Box { //inherits from box with extend
-    public $weight;
-
-    public function mass(){
-        return $this->volume() * $this->weight;
-    }
-}
+$box1 = new Box(1,2,3);
+$box1 = 1;
+$box2 = new Box(4,5,6);
+var_dump($box1, $box2);
+echo $box1;
