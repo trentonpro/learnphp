@@ -4,4 +4,5 @@ use App\Controllers\PublicController;
 use App\Router;
 
 Router::addRoute('/', [PublicController::class, 'index']);
-Router::addRoute('/', [PublicController::class, 'us']);
+
+Router::addRoute('/us', [PublicController::class, 'us']);
