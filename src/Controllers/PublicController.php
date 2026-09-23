@@ -2,7 +2,9 @@
 
 namespace App\Controllers;
 
-use App\DB;
+
+use App\Models\Article;
+use App\Models\User;
 use PDO;
 use PDOException;
 
@@ -10,9 +12,10 @@ class PublicController
 {
     public function index()
     {
-        $db = new DB();
-        $articles = $db->all();
+        $articles = Article::all();
         dump($articles);
+        $users = User::all();
+        dump($users);
         // try {
         //     $conn = new PDO("sqlite:" . __DIR__ . '/../../db.sqlite');
         //     // set the PDO error mode to exception
