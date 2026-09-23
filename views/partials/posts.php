@@ -1,9 +1,9 @@
          <h3 class="pb-4 mb-4 fst-italic border-bottom">From the Firehose</h3>
-          <?php foreach($posts as $post): ?>
+          <?php foreach($articles as $article): ?>
             <article class="blog-post">
-              <h2 class="display-5 link-body-emphasis mb-1"><?= $post['title'] ?></h2>
+              <h2 class="display-5 link-body-emphasis mb-1"><?= $article->title ?></h2>
               <p class="blog-post-meta">
-                <?= $post['date'] ?> by <a href="#"><?= $post['author'] ?></a>
+                <?= $post['date'] ?> by <a href="#"><?= $article->author ?></a>
               </p>
               <p>
                 <?= $post['content'] ?>
