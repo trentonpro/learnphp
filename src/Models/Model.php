@@ -2,15 +2,14 @@
 
 namespace App\Models;
 
+use App\DB;
+
 abstract class Model {
     public $id;
     protected static string $table;
 
-    public function all() {
+    public static function all() {
         $db = new DB();
-        return $db->all(static::$table static::class);
+        return $db->all(static::$table, static::class);
     }
 }
-
-
-

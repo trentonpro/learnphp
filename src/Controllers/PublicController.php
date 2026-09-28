@@ -5,22 +5,21 @@ namespace App\Controllers;
 
 use App\Models\Article;
 use App\Models\User;
-use PDO;
-use PDOException;
 
 class PublicController
 {
     public function index()
     {
+        
         $articles = Article::all();
         $title = 'World';
-        view('index', compact('title', 'posts'));
+        view('index', compact('title', 'articles'));
     }
 
     public function us()
     {
-        $title = 'U.S';
         $articles = Article::all();
+        $title = 'U.S';
         view('us', compact('title', 'articles'));
     }
 
