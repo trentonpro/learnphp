@@ -59,4 +59,4 @@ class DB {
         $sql = "DELETE FROM $table WHERE id=$id";
         $this->conn->exec($sql);
     }
-}s
+}

@@ -9,7 +9,7 @@
               class="blog-header-logo text-body-emphasis text-decoration-none"
               href="#">Large</a>
           </div>
-          <div class="col-4 d-flex justify-content-end align-items-center">
+          <div class="col-4 d-flex justify-content-end align-items-center gap-3">
             <a class="link-secondary" href="#" aria-label="Search">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -29,6 +29,7 @@
               </svg>
             </a>
             <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+            <a class="btn btn-sm btn-outline-secondary" href="/login">Login </a>
           </div>
         </div>
       </header>

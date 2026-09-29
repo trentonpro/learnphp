@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\ArticlesController;
+use App\Controllers\AuthController;
 use App\Controllers\PublicController;
 use App\Router;
 
@@ -19,3 +20,10 @@ Router::get('/admin/articles/view', [ArticlesController::class, 'view']);
 Router::get('/admin/articles/edit', [ArticlesController::class, 'edit']);
 Router::post('/admin/articles/edit', [ArticlesController::class, 'update']);
 Router::get('/admin/articles/delete', [ArticlesController::class, 'delete']);
+
+Router::get('/register', [AuthController::class, 'registerForm']);
+Router::get('/register', [AuthController::class, 'register']);
+Router::get('/login', [AuthController::class, 'loginForm']);
+Router::get('/login', [AuthController::class, 'login']);
+Router::get('/logout', [AuthController::class, 'logout']);
+
