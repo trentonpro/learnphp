@@ -44,15 +44,13 @@ class DB {
     }
 
     public function update($table, $fields, $id) {
-        $updateText = '';
-        foreach($fields as $name=>$value) {
-            $updateText .= "$name='$value', ";
+        $assignments = [];
+        foreach (array_keys($fields) as $name) {
+            $assignments[] = "$name = ?";
         }
-        $updateText = substr($updateText, 0, -2);
-        $sql = "UPDATE $table
-                SET $updateText
-                WHERE id=$id";
-        $this->conn->exec($sql);
+        $updateText = implode(', ', $assignments);
+        $statement = $this->conn->prepare("UPDATE $table SET $updateText WHERE id = ?");
+        $statement->execute([...array_values($fields), $id]);
     }
 
     public function delete($table, $id) {
